@@ -1,6 +1,8 @@
 # Python GitHub template with Poetry and Pre-Commit hooks
 
-A template for python projects with pre-commit hooks, poetry, mypy and pytest
+A template for DL python projects with fastai/pytorch, jupyter notebooks and a standard repository structure.
+IT 
+also has pre-commit hooks, poetry, mypy and pytest
 
 ## Features:
 - a standard repository structure
@@ -28,6 +30,9 @@ A template for python projects with pre-commit hooks, poetry, mypy and pytest
 │   ├── your_package/
 │   │   ├── ... 
 │   ├── ...
+├── notebooks/     # place your jupyter notebooks here
+│   ├── your_notebook.ipynb
+│   ├── ...
 ├── tests/         # place your pytest files here
 │   ├── test_your_stuff.py   # example
 │   ├── ...
@@ -35,7 +40,9 @@ A template for python projects with pre-commit hooks, poetry, mypy and pytest
 ```
 
 ## Setup
-- first make sure you have poetry installed by running
+- edit the `name`/`description`/`version`/`author` fields in `pyproject.toml`
+
+make sure you have poetry installed by running
   ```bash
   poetry --version
   ```
@@ -47,13 +54,24 @@ A template for python projects with pre-commit hooks, poetry, mypy and pytest
   ```
   - > this will also install `pre-commit` for you
 
+- now you can use the poetry virutal environment to run all your tools
+  ```bash
+  poetry shell
+  ```
+  
+- inside the poetry shell you have jupyter lab available
+    ```bash
+    jupyter lab
+    ```
+  
+### Optional: pre-commit hooks
 - now run `pre-commit` to setup all your tools
   ```bash
   poetry run pre-commit run --all-files
 - install your pre-commit hooks into the repository
   ```bash
   poetry run pre-commit install
-- edit the `name`/`description`/`version`/`author` fields in `pyproject.toml`
+
 ## Howto
 - run all hooks
   ```bash
