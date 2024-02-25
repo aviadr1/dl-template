@@ -1,4 +1,4 @@
-# Python GitHub template with Poetry and Pre-Commit hooks
+# DL-Template: Python GitHub template with Poetry and Pre-Commit hooks
 
 A template for DL python projects with fastai/pytorch, jupyter notebooks and a standard repository structure.
 IT 
@@ -38,6 +38,11 @@ also has pre-commit hooks, poetry, mypy and pytest
 │   ├── ...
 ├── .pre-commit-config.yaml  # preconfigured pre-commit hooks
 ```
+
+## How to use
+1. Fork this repository as the basis of your own project
+2. Clone the repository to your own computer
+3. Follow the setup steps 
 
 ## Setup
 - edit the `name`/`description`/`version`/`author` fields in `pyproject.toml`
